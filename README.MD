@@ -14,3 +14,8 @@ cat( rep ( "\n", 64 ) )
 setwd(dir)
 files = list.files ( pattern = 'hdf$' ) 
 ```
+#### comprension de listas
+```R
+library(foreach)
+foreach(x=1:length(x_var), .combine = rbind) %do% (x_var[x])^2
+```
