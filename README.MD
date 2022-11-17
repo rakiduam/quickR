@@ -6,8 +6,9 @@ writeClipboard(gsub("\\\\", "/", readClipboard()))
 
 #### limpia ambiente y variables antes de ejecutar un código. 
 ```R
-rm ( list = ls () )
-cat( rep ( "\n", 64 ) )
+gc()                        # ejecuta garbage collection
+rm(list=ls())               # limpiar ambiente
+cat('\014')                 # limpiar consola
 ```
 #### listado de archivos en una carpeta, por tipo
 ```R
