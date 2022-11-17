@@ -18,4 +18,9 @@ files = list.files ( pattern = 'hdf$' )
 ```R
 library(foreach)
 foreach(x=1:length(x_var), .combine = rbind) %do% (x_var[x])^2
+
+# list comprehension tipo python
+foreach(x = sample(1:10000, 10), .combine = c) %:%
+    when(x %% 3 == 0 || x %% 5 == 0) %do% x
+
 ```
